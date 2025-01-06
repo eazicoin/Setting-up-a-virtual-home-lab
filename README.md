@@ -43,27 +43,59 @@ In this setup I will be using Oracle VM VirtualBox because it is compatible with
 Download Oracle VM VirtualBox by clicking here. Once the download completes, I launched the installation.
 
 
-<img src="folder/VirtualBox-Complete.jpg">
+<img src="folder/VirtualBox-Install.jpg">
 
  
 I Proceeded through the installation using all of the default options. Any prompts that are a yes/no you need to select "yes'.
+
+
+<img src="folder/VirtualBox-Complete.jpg">
+
  
 Click Finish and launch VirtualBox.
+
+
+<img src="folder/VirtualBox-Dashboard.jpg">
+
  
 <h2>Creating a Virtual Machine</h2>
 Now that we know what type of virtual network we want to use it's time to create a VM (Virtual Machine). We can do this by clicking the New button within the VirtualBox Manager.
+
+
+<img src="folder/New.jpg">
+
  
 This will launch the new VM window. Go ahead and click the Expert Mode button. Don't worry - it doesn't make the process more difficult it only allows you to create a VM while navigating through less pages.
+
+
+<img src="folder/New-VM.jpg">
+
  
 I am going to specify a name of "MyVM" and 2048 MB (2gb) of RAM then I will click Create.
+
+
+<img src="folder/New-Vm2.jpg">
+
  
 This will open another window for creating the Virtual Hard Disk. The default options here are all fine except for the File Size. I am going to set my new HDD to 60GB and then choose Create.
+
+
+<img src="folder/New-VM-HDD.jpg">
+
  
 Since this HDD is going to be dynamically allocated (option on the middle-right of the screenshot below), the HDD file will only be as large as the amount of data stored on it - and a maximum of 60GB
 Now you will see MyVM listed on the VirtualBox dashboard. Before we start the VM we can modify the settings of the VM if we want. Generally you might want to assign more processors, change the networking adapters and mount an ISO.
+
+
+<img src="folder/VM-Settings.jpg">
+
  
 Increasing the processor CPUs can greatly improve the performance of your VM, so if at all possible increase the number of CPUs to 2.
 Pro tip: Storing the VM's hard disk file on an SSD will also significantly increase the VMs performance.
+
+
+<img src="folder/CPUs.jpg">
+
  
 And that is all we need to do to create the VM. Of course we can't start the VM yet because we haven't downloaded or attached an operating system ISO... But we will cover that in the next section.
 
@@ -75,6 +107,9 @@ Keep in mind that you won't be able to access all of these network types if you 
 Here is an overview of the different network types you could create:
  
 
+<img src="folder/VirtualBox-VM-Adapter-Types.jpg">
+
+
 <h3>NAT</h3>
 This network type allows your VMs to use the internet connectivity of the host computer. You will have no connectivity to other VMs or the host computer. Use this type if your lab will only have one VM.
  
@@ -85,6 +120,9 @@ This network is the same as NAT, but it allows your VMs to communicate to other 
  
 You can create a NAT Network by clicking on File > Preferences. Select the Network tab and then click the plus button to create a new NAT Network.
  
+
+<img src="folder/NAT-Network.jpg">
+
 
 <h3>Bridged Adapter</h3>
 Using this network type will cause your router to treat your VM as a physical computer. This means your VM will be connected to the same network as your host computer. Use this lab when you need to access your VMs from your host network.
@@ -101,6 +139,9 @@ This is essentially the same as an internal network, except that your host compu
 You can create a host-only network by select File > Host Network Manager
  
 
+<img src="folder/Host-Only-Network-Adapters.jpg">
+
+
 <h3>Generic Driver</h3>
 Oracles documentation for the generic driver states:
 The generic driver attachment is special and cannot be considered as an alternative to other attachment types.
@@ -112,9 +153,14 @@ First I will select File > Preferences, then navigate to the Network tab. Next I
 This will create a new NAT Network. If I want to modify the subnet, disable DHCP or support IPv6 I can do this by double-clicking the NAT Network.
  
 
+<img src="folder/NAT-Network-2.jpg">
+
+
 I am going to leave all of these options at default... so I am done creating the Virtual Network!
 Configure the Networking tab for your chosen network type. Again, the easiest solution is to create and use a NAT Network.
 
+
+<img src="folder/VirtualBox-VM-Adapter-Types.jpg">
  
 
 <h2>Downloading Your operating systems ISO(s)</h2>
@@ -138,8 +184,15 @@ Once you have downloaded your ISO file, it's time to mount it to your VM in Virt
 Right click on your VM and select settings then open the Storage tab. From there click the Empty disc icon, then again the disc icon under Attributes on the right hand side of the window. Click the Choose Virtual Optical Disk File... and browse to and open your desired ISO.
  
 
+<img src="folder/Attach-an-ISO.jpg">
+
+
 Click OK and now when we launch the VM you will be able to begin your OS installation.
 I mounted a Windows Server 2016 ISO so when I launch the VM I will see the installation screen for this OS.
+
+
+<img src="folder/Windows-Server-2016-Install-2.jpg">
+
  
 Now you can run through your OS installation and complete your lab setup.
 Wrapping it Up...
