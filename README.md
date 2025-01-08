@@ -40,7 +40,7 @@ In this setup I will be using Oracle VM VirtualBox because it is compatible with
 
  
 <h2>Downloading and Installing VirtualBox</h2>
-Download Oracle VM VirtualBox by [clicking here](https://download.virtualbox.org/virtualbox/7.1.4/VirtualBox-7.1.4-165100-Win.exe). Once the download completes, I launched the installation.
+Download Oracle VM VirtualBox by <a href="https://download.virtualbox.org/virtualbox/7.1.4/VirtualBox-7.1.4-165100-Win.exe"=blank">clicking here</a>. Once the download completes, I launched the installation.
 
 
 <img src="folder/VirtualBox-Install.jpg">
